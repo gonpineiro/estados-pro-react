@@ -5,8 +5,6 @@ function UseState({ name }) {
     const [loading, setLoading] = React.useState(false);
 
     React.useEffect(() => {
-        console.log('Empezando efecto');
-
         if (loading) {
             setTimeout(() => {
                 console.log('Haciendo la validacion');
@@ -16,8 +14,6 @@ function UseState({ name }) {
                 console.log('Terminando la validacion');
             }, 3000);
         }
-
-        console.log('Terminando efecto');
     }, [loading]);
 
     return (
